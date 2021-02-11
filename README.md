@@ -12,61 +12,15 @@ The idea was inspired by [LJ147](https://github.com/LJ147/GithubTrending).
 
 ## Requirements
 
-+   python 3.6+
-+   git
-+   screen
-+   unzip
++   Github Account
 
 ## Configuration
 
-+ **Fork my repo or create your own repo** for uploading markdown files.
-
-+ If you don't have ssh keys, [generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/). 
-
-## Usage on Linux
-
-``` bash
-$ sudo apt install -y unzip screen python3-pip
-$ sudo apt-get install -y python-tk python3-tk
-
-$ git clone https://github.com/rdp-studio/GitHub-Trending-Crawler
-$ cd GitHub-Trending-Crawler/
-$ mkdir img
-$ git init
-$ git remote add origin <YourGitHubRepoURL>
-
-# using virtual environment is highly recommended
-$ pip3 install -r requirements.txt
-```
-
-1. Switch to the repository directory and just type `screen` at the command prompt. Then the screen will show with interface exactly as the command prompt.
-
-2. When you enter the screen, you can do all your work as you are in the normal CLI environment. But since the screen is an application, so it have command or parameters.
-
-3. And now, we can run the program: `python3 main.py -p -l`
-
-4. While the program is running, you can press `Ctrl + A` and `d` to detach the screen. Then you can disconnect your SSH session.
-
-5. When you want to check the status of the crawler, just reconnect to your server via ssh. Then use this command  `screen -r` to restore the screen. _For more information about `screen` command, you can visit [here](https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/)._
-
-## CLI Options
-
-```bash
-python3 main.py (-h | --help)
-python3 main.py (-v | --version)
-python3 main.py [-l | --loop] [-p | --push] [--frequency=<f>]
-
-Options:
-  -h --help        Show this screen.
-  -v --version     Show version.
-  -l --loop        Run this program cyclically.
-  -p --push        Use git to push the markdown and the image.
-  --frequency=<f>  The frequency of crawling [default: daily].
-```
+First,[Generate](https://github.com/rdp-studio/GitHub-Trending-Crawler/generate) form [This Repo](https://github.com/rdp-studio/GitHub-Trending-Crawler),then active GitHub Pages and Github Actions for your repo,then edit line 137 in file crawler.py for your own infomation with this temeplete`f.write('<script type="text/javascript">window.location.href="https://[GITHUB USER NAME].github.io/[GITHUB REPO NAME]/' + today_date + '.html";</script>\n')`,then run the action in the actions page,init complete.It will automaticly run at UTC+8 8:00.
 
 ## Change Logs
 
-### V1.5 (2020-02-22)
+### V2.5 (2021-02-11)
 
 + Refactor code with object-oriented methods
 + Split single python file into several files
@@ -74,3 +28,4 @@ Options:
 + Add logging feature
 + Use `docopt` to enhance command-line usage
 + Update requirements
++ Use Github Actions for auto run every day
