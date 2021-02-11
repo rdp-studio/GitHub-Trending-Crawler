@@ -143,6 +143,6 @@ class GitHubCrawler:
             for info in infos:
                 descriptions.append(info.desc)
 
-        path = generate_wordcloud(descriptions=descriptions, filename=today_date)
-        append_img_to_md(img_path=path, md_path=filename)
+        #path = generate_wordcloud(descriptions=descriptions, filename=today_date)
+        #append_img_to_md(img_path=path, md_path=filename)
         self.logger.info("Finish crawling: %s", today_date)
