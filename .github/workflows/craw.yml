@@ -29,11 +29,11 @@ jobs:
         python main.py
 
     - name: Commit
-        run: |
-          git config --global user.email bot@rdpstudio.top
-          git config --global user.name RDPStudio Bot
-          git add .
-          git commit -m "Update"
+      run: |
+        git config --global user.email bot@rdpstudio.top
+        git config --global user.name RDPStudio Bot
+        git add .
+        git commit -m "Update"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
