@@ -131,6 +131,10 @@ class GitHubCrawler:
 
         # Create markdown file
         create_markdown(today_date, filename)
+        
+        #Create redirect script
+        with open("index.html", 'w') as f:
+            f.write('<script type="text/javascript">window.location.href="https://rdp-studio.github.io/GitHub-Trending-Crawler/' + today_date + '.html";</script>\n')
 
         descriptions = []
         for lang in langs:
