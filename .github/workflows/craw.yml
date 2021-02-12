@@ -1,9 +1,7 @@
 name: GitHub Trending Crawler
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
-  # Allows you to run this workflow manually from the Actions tab
+  repository_dispatch:
   workflow_dispatch:
 
 jobs:
