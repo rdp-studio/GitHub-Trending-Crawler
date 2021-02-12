@@ -1,6 +1,6 @@
 # GitHub-Trending-Crawler
 
-Crawling [GitHub Trending Pages](https://github.com/trending/) every day.
+Crawling [GitHub Trending Pages](https://github.com/trending/) if you click star or run at actions page.
 
 ## Introduction
 
