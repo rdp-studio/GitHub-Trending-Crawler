@@ -12,7 +12,7 @@ The idea was inspired by [LJ147](https://github.com/LJ147/GithubTrending).
 
 ## Requirements
 
-+   Github Account
++   Github PAT saved as secret(at repo settings page) named `GH_TOKEN`.
 
 ## Configuration
 
